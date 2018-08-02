@@ -1,5 +1,5 @@
 from google.cloud import datastore
-import events
+from . import events
 
 datastore_client = datastore.Client('my-gcp-project')
 
