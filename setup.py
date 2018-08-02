@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
-    install_requires=['google-cloud==0.34.0','google-cloud-datastore==1.7.0','google-cloud-pubsub==0.35.4']
+    install_requires=['google-cloud==0.34.0','google-cloud-datastore==1.7.0','google-cloud-pubsub==0.35.4'],
     classifiers=(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
