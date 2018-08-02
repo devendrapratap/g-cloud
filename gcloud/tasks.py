@@ -35,7 +35,6 @@ def create(task):
 def update_manager_state(task_id, state, percentage_complete):
     with datastore_client.transaction():
         key = datastore_client.key("tasks", task_id)
-
         results = datastore_client.get(key)
         results["managerState"] = state
         results["percentageComplete"] = percentage_complete
