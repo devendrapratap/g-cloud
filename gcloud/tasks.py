@@ -1,7 +1,13 @@
 from google.cloud import datastore
 from . import events
+import os
 
-datastore_client = datastore.Client('my-gcp-project')
+PROJECT_NAME = os.getenv("PROJECT_NAME")
+
+if PROJECT_NAME is None:
+    raise Exception("env_var PROJECT_NAME was not found")
+
+datastore_client = datastore.Client(PROJECT_NAME)
 
 def exists(task_id):
     key = datastore_client.key("tasks", task_id)
